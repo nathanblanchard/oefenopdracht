@@ -4,6 +4,7 @@ public class MainTest2 {
 
 
     public static void main(String[] args) {
-        System.out.println("test12");
+        System.out.println("test123");
+        System.out.println("dit is nog een test");
     }
 }
