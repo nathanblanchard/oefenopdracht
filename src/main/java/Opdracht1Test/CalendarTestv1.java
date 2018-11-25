@@ -8,12 +8,12 @@ public class CalendarTestv1 {
 
         LocalDate date = LocalDate.of(2018, 10, 1);
 
-        // print maand
+        // print maand.
         System.out.println(date.getMonth());
 
         //check 1e dag (ma/di/wo) van de maand vanuit LocalDate. Hiermee kun je
         //vaststellen waar je moet beginnen met het plaatsen in de Array van 6 bij 7.
-//        System.out.println(date.getDayOfWeek());
+        //        System.out.println(date.getDayOfWeek());
         StringBuilder sb1 = new StringBuilder();
         sb1.append(date.getDayOfWeek());
         System.out.println(sb1.toString());
