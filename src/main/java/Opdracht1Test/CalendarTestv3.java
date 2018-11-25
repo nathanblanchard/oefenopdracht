@@ -42,16 +42,8 @@ public class CalendarTestv3 {
         StringBuilder sb1 = new StringBuilder();
         sb1.append(date.getDayOfWeek());
 
-        //print dagen in de week Stringbuilder oefening
-        StringBuilder sb = new StringBuilder();
-        sb.append("Su  ");
-        sb.append("Mo  ");
-        sb.append("Tu  ");
-        sb.append("We  ");
-        sb.append("Th  ");
-        sb.append("Fr  ");
-        sb.append("Sa  ");
-        System.out.println(sb.toString());
+        //print dagen in de week
+        System.out.println("Su  Mo  Tu  We  Th  Fr  Sa  ");
 
         //SUNDAY
         for (int a = 0; a <= 6; a++) {
