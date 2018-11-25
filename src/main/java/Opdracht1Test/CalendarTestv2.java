@@ -2,8 +2,6 @@
  * NOTITIES
  *
  * Work in progress
- * Arrayboard gemaakt
- * For in een for loop
  */
 
 package Opdracht1Test;
