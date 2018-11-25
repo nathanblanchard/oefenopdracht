@@ -1,5 +1,14 @@
 package Opdracht1Test;
 
+/**
+ * NOTITIES
+ *
+ * Work in progress
+ * Invulscherm werkt nog niet, de ingevoerde data moet naar LocalDate gaan.
+ * Maand en jaar handmatig in de code aanpassen bij Localdate werkt wel.
+ * 1e dag van de maand en het aantal maanden wordt opgehaald. Maandag en donderdag gedaan. Moet sneller kunnen.
+ */
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
@@ -10,11 +19,11 @@ public class CalendarTestv3 {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Type een jaargetal");
+        System.out.println("Type een jaargetal:");
         int jaarNummer = input.nextInt();
         System.out.println("Het jaar dat je hebt ingevuld is: " + jaarNummer);
 
-        System.out.println("Type een maandnummer");
+        System.out.println("Type een maandnummer:");
         int maandNummer = input.nextInt();
         System.out.println("Het maandnummer dat je hebt ingevuld is: " + maandNummer);
 
