@@ -6,6 +6,7 @@
  * Strings productomschrijving en double price korter opgeschreven
  *
  * Nog te doen:
+ * loops gebruiken
  * kortingen doorvoeren, en op woensdagen aanbieding
  * verwijderen van producten uitwerken
  */
@@ -66,10 +67,7 @@ public class Supermarktv1 {
         int quantityLuiers = input5;
         double totaalAankoop5 = quantityLuiers * price5;
 
-        // Declare and initialize numeric field: tax
         // Declare subtotal field
-        double tax = 0.21;
-        double total;
         double subtotal = (totaalAankoop1) + (totaalAankoop2) + (totaalAankoop3) + (totaalAankoop4)+ (totaalAankoop5);
 
         // Beschrijving aankoop producten en hoeveelheden
@@ -85,8 +83,10 @@ public class Supermarktv1 {
         System.out.println("Subtotaal excl. 21% btw: " + subtotal);
         System.out.println("------------------------------");
 
-        // voeg btw 21% toe over het subtotaal
-        total = subtotal * (1 + tax);
+        // subtotaal mte 21% btw toegevoegd
+        // totaal
+        double tax = 0.21;
+        double total = subtotal * (1 + tax);
 
         //formatteren naar 2 decimalen met DecimalFormat
         DecimalFormat dFormatter = new DecimalFormat("0.00");
