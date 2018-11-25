@@ -3,10 +3,10 @@
  * Work in progress...
  * Robijn wasverzachter, Brinta, Chinese groenten, kwark en luiers erin gezet.
  * DecimalFormatter gebruikt om af te ronden op 2 decimalen
+ * Strings productomschrijving en double price korter opgeschreven
  *
  * Nog te doen:
  * kortingen doorvoeren, en op woensdagen aanbieding
- * korter opschrijven (sub)totaal dmv loop
  * verwijderen van producten uitwerken
  */
 
@@ -25,58 +25,46 @@ public class Supermarktv1 {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Hoeveel Robijn Wasverzachter wilt u in uw winkelwagen doen?:");
-        Integer inputQ1 = Integer.valueOf(sc.nextLine());
-        System.out.println(inputQ1);
+        Integer input1 = Integer.valueOf(sc.nextLine());
+        System.out.println(input1);
 
         System.out.println("Hoeveel Brinta wilt u in uw winkelwagen doen?:");
-        Integer inputQ2 = Integer.valueOf(sc.nextLine());
-        System.out.println(inputQ2);
+        Integer input2 = Integer.valueOf(sc.nextLine());
+        System.out.println(input2);
 
         System.out.println("Hoeveel pakken Chinese groenten wilt u in uw winkelwagen doen?:");
-        Integer inputQ3 = Integer.valueOf(sc.nextLine());
-        System.out.println(inputQ3);
+        Integer input3 = Integer.valueOf(sc.nextLine());
+        System.out.println(input3);
 
         System.out.println("Hoeveel bakjes kwark wilt u in uw winkelwagen doen?:");
-        Integer inputQ4 = Integer.valueOf(sc.nextLine());
-        System.out.println(inputQ4);
+        Integer input4 = Integer.valueOf(sc.nextLine());
+        System.out.println(input4);
 
         System.out.println("Hoeveel luiers wilt u in uw winkelwagen doen?:");
-        Integer inputQ5 = Integer.valueOf(sc.nextLine());
-        System.out.println(inputQ5);
+        Integer input5 = Integer.valueOf(sc.nextLine());
+        System.out.println(input5);
+
+        //productomschrijving product 1,2,3,4,5
+        String itemDesc1 = "Robijn", itemDesc2 = "Brinta", itemDesc3 = "Chinese Groenten", itemDesc4 = "Kwark", itemDesc5 = "Luiers";
+
+        //prijzen price1 (robijn), price2 (brinta), price 3 (chinese groenten), price 4 (kwark), price 5 (luiers)
+        double price1 = 3.00, price2 = 2.50, price3 = 5.00, price4 = 2.00, price5 = 10.00;
 
         //input van de scanner naar totaal berekend
-        int amountRobijn = inputQ1;
-        double price1 = 3.00;
-        double totaalAankoop1 = amountRobijn * price1;
+        int quantityRobijn = input1;
+        double totaalAankoop1 = quantityRobijn * price1;
 
-        //input van de scanner naar totaal berekend
-        int amountBrinta = inputQ2;
-        double price2 = 2.50;
-        double totaalAankoop2 = amountBrinta * price2;
+        int quantityBrinta = input2;
+        double totaalAankoop2 = quantityBrinta * price2;
 
-        //input van de scanner naar totaal berekend
-        int amountChineseGroenten = inputQ3;
-        double price3 = 5.00;
-        double totaalAankoop3 = amountChineseGroenten * price3;
+        int quantityChineseGroenten = input3;
+        double totaalAankoop3 = quantityChineseGroenten * price3;
 
-        //input van de scanner naar totaal berekend
-        int amountKwark = inputQ4;
-        double price4 = 2.00;
-        double totaalAankoop4 = amountKwark * price4;
+        int quantityKwark = input4;
+        double totaalAankoop4 = quantityKwark * price4;
 
-        //input van de scanner naar totaal berekend
-        int amountLuiers = inputQ5;
-        double price5 = 10.00;
-        double totaalAankoop5 = amountLuiers * price5;
-
-        // klant, product1,2,3
-        String custName = "U";
-        String itemDesc1 = "Robijn";
-        String itemDesc2 = "Brinta";
-        String itemDesc3 = "Chinese Groenten";
-        String itemDesc4 = "Kwark";
-        String itemDesc5 = "Luiers";
-        String message;
+        int quantityLuiers = input5;
+        double totaalAankoop5 = quantityLuiers * price5;
 
         // Declare and initialize numeric field: tax
         // Declare subtotal field
@@ -85,13 +73,13 @@ public class Supermarktv1 {
         double subtotal = (totaalAankoop1) + (totaalAankoop2) + (totaalAankoop3) + (totaalAankoop4)+ (totaalAankoop5);
 
         // Beschrijving aankoop producten en hoeveelheden
-        message = custName + " moet het volgende betalen aan de kassa: " + "\n"
-                + inputQ1 + "x" + " " + itemDesc1 + ": € " + totaalAankoop1 + "\n"
-                + inputQ2 + "x" + " " + itemDesc2 + ": € " + totaalAankoop2 + "\n"
-                + inputQ3 + "x" + " " + itemDesc3 + ": € " + totaalAankoop3 + "\n"
-                + inputQ4 + "x" + " " + itemDesc4 + ": € " + totaalAankoop4 + "\n"
-                + inputQ5 + "x" + " " + itemDesc5+ ": € " + totaalAankoop5 + "\n"
-        ;
+        String message = "U moet het volgende betalen aan de kassa: " + "\n"
+                + input1 + "x" + " " + itemDesc1 + ": € " + totaalAankoop1 + "\n"
+                + input2 + "x" + " " + itemDesc2 + ": € " + totaalAankoop2 + "\n"
+                + input3 + "x" + " " + itemDesc3 + ": € " + totaalAankoop3 + "\n"
+                + input4 + "x" + " " + itemDesc4 + ": € " + totaalAankoop4 + "\n"
+                + input5 + "x" + " " + itemDesc5+ ": € " + totaalAankoop5 + "\n"
+                ;
         System.out.print(message);
         System.out.println("------------------------------");
         System.out.println("Subtotaal excl. 21% btw: " + subtotal);
@@ -106,7 +94,5 @@ public class Supermarktv1 {
         System.out.print("Totaal incl. 21% btw: € "+ formatted);
     }
 }
-
-
 
 
