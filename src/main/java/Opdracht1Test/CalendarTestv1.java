@@ -2,7 +2,7 @@ package Opdracht1Test;
 
 import java.time.LocalDate;
 
-public class CalendarTest1 {
+public class CalendarTestv1 {
 
     public static void main(String[] args) {
 
