@@ -1,7 +1,7 @@
 /**
  * NOTITIES
  *
- * Work in progress
+ * Work in progress.
  */
 
 package Opdracht1Test;

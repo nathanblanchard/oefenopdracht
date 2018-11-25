@@ -1,7 +1,7 @@
 /**
  * NOTITIES
  *
- * Work in progress
+ * Work in progress.
  * Invulscherm werkt nog niet, de ingevoerde data moet naar LocalDate gaan.
  * Maand en jaar handmatig in de code aanpassen bij Localdate werkt wel.
  * 1e dag van de maand en het aantal maanden wordt opgehaald. Maandag en donderdag gedaan. Moet sneller kunnen.
