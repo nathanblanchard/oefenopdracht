@@ -3,8 +3,10 @@
  *
  * Work in progress.
  * Invulscherm werkt nog niet, de ingevoerde data moet naar LocalDate gaan.
- * Maand en jaar handmatig in de code aanpassen bij Localdate werkt wel.
- * 1e dag van de maand en het aantal maanden wordt opgehaald. Maandag en donderdag gedaan. Moet sneller kunnen.
+ * Maand en jaar handmatig in de code aanpassen bij LocalDate werkt wel.
+ * Bij LocalDate maandnummer wijzigen naar januari 2018, februari 2018, oktober 2018, en november 2018 werkt enigszins.
+ * omdat de maandag en donderdag zijn gedaan. Dit moet sneller en korter kunnen.
+ * 1e dag van de maand en het aantal maanden wordt opgehaald.
  */
 
 package Opdracht1Test;
@@ -27,7 +29,7 @@ public class CalendarTestv3 {
         int maandNummer = input.nextInt();
         System.out.println("Het maandnummer dat je hebt ingevuld is: " + maandNummer);
 
-        LocalDate date = LocalDate.of(2018, 10, 1);
+        LocalDate date = LocalDate.of(2018, 1, 1);
         date.lengthOfMonth();
         date.getDayOfWeek();
         // print maand
