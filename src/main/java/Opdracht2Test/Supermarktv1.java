@@ -26,7 +26,7 @@ public class Supermarktv1 {
         Integer inputQ1 = Integer.valueOf(sc.nextLine());
         System.out.println(inputQ1);
 
-        System.out.println("Hoeveel Brinta wilt u kopen wilt u in uw winkelwagen doen?:");
+        System.out.println("Hoeveel Brinta wilt u in uw winkelwagen doen?:");
         Integer inputQ2 = Integer.valueOf(sc.nextLine());
         System.out.println(inputQ2);
 
