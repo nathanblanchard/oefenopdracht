@@ -1,5 +1,3 @@
-package Opdracht1Test;
-
 /**
  * NOTITIES
  *
@@ -8,6 +6,8 @@ package Opdracht1Test;
  * Maand en jaar handmatig in de code aanpassen bij Localdate werkt wel.
  * 1e dag van de maand en het aantal maanden wordt opgehaald. Maandag en donderdag gedaan. Moet sneller kunnen.
  */
+
+package Opdracht1Test;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

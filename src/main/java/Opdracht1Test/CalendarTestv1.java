@@ -1,3 +1,9 @@
+/**
+ * NOTITIES
+ *
+ * Work in progress
+ */
+
 package Opdracht1Test;
 
 import java.time.LocalDate;
