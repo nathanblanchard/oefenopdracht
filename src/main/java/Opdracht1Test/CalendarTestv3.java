@@ -2,10 +2,9 @@
  * NOTITIES
  *
  * Work in progress.
- * Invulscherm werkt nog niet, de ingevoerde data moet naar LocalDate gaan.
- * Maand en jaar handmatig in de code aanpassen bij LocalDate werkt wel.
- * Bij LocalDate maandnummer wijzigen naar januari 2018, februari 2018, oktober 2018, en november 2018 werkt enigszins.
- * omdat de maandag en donderdag zijn gedaan. Dit moet sneller en korter kunnen.
+ * Fix: Invulscherm werkt nu wel, de ingevoerde data gaat naar LocalDate
+ * januari 2018, februari 2018, oktober 2018, en november 2018 werkt enigszins.
+ * omdat de maandag en donderdag zijn gedaan. Dit moet vast sneller en korter kunnen.
  * 1e dag van de maand en het aantal maanden wordt opgehaald.
  */
 
@@ -19,17 +18,19 @@ public class CalendarTestv3 {
 
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
+        //scanner
+        Scanner sc = new Scanner(System.in);
 
-        System.out.println("Type een jaargetal:");
-        int jaarNummer = input.nextInt();
-        System.out.println("Het jaar dat je hebt ingevuld is: " + jaarNummer);
+        System.out.println("Type een 4 cijferig jaargetal (bijv. 2018):");
+        Integer input1 = Integer.valueOf(sc.nextLine());
+        System.out.println(input1);
 
         System.out.println("Type een maandnummer:");
-        int maandNummer = input.nextInt();
-        System.out.println("Het maandnummer dat je hebt ingevuld is: " + maandNummer);
+        Integer input2 = Integer.valueOf(sc.nextLine());
+        System.out.println(input2);
 
-        LocalDate date = LocalDate.of(2018, 1, 1);
+        //input van de scanner gaat naar LocalDate, dayOfMonth is al vastgesteld
+        LocalDate date = LocalDate.of(input1, input2, 1);
         date.lengthOfMonth();
         date.getDayOfWeek();
         // print maand
