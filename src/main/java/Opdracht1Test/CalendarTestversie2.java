@@ -3,7 +3,7 @@ package Opdracht1Test;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-public class CalendarTestv2 {
+public class CalendarTestversie2 {
 
     public static void main(String[] args) {
 
