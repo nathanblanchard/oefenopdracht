@@ -3,8 +3,10 @@
  *
  * Work in progress.
  * Fix: Invulscherm werkt nu wel, de ingevoerde data gaat naar LocalDate
- * januari 2018, februari 2018, oktober 2018, en november 2018 werkt enigszins.
- * omdat de maandag en donderdag zijn gedaan. Dit moet vast sneller en korter kunnen.
+ * April 2018, Juli 2018 werkt.
+ * Januari 2018, februari 2018, oktober 2018, en november 2018 werken enigszins omdat
+ * de 1e dag van de maand, zondag, maandag en donderdag zijn gedaan.
+ * Dit moet vast sneller en korter kunnen.
  * 1e dag van de maand en het aantal maanden wordt opgehaald.
  */
 
@@ -50,6 +52,42 @@ public class CalendarTestv3 {
         sb.append("Fr  ");
         sb.append("Sa  ");
         System.out.println(sb.toString());
+
+        //SUNDAY
+        for (int a = 0; a <= 6; a++) {
+            if ("SUNDAY".equals(sb1.toString())) {
+                DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd  ");
+                System.out.print(dateFormatter.format(date.plusDays(a)));
+            }
+        }
+        System.out.print("\n");
+        for (int b = 7; b <= 13; b++) {
+            if ("SUNDAY".equals(sb1.toString())) {
+                DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd  ");
+                System.out.print(dateFormatter.format(date.plusDays(b)));
+            }
+        }
+        System.out.print("\n");
+        for (int c = 14; c <= 20; c++) {
+            if ("SUNDAY".equals(sb1.toString())) {
+                DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd  ");
+                System.out.print(dateFormatter.format(date.plusDays(c)));
+            }
+        }
+        System.out.print("\n");
+        for (int d = 21; d <= 27; d++) {
+            if ("SUNDAY".equals(sb1.toString())) {
+                DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd  ");
+                System.out.print(dateFormatter.format(date.plusDays(d)));
+            }
+        }
+        System.out.print("\n");
+        for (int e = 28; e <= 30; e++) {
+            if ("SUNDAY".equals(sb1.toString())) {
+                DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("d  ");
+                System.out.print(dateFormatter.format(date.plusDays(e)));
+            }
+        }
 
         //MONDAY
         for (int a = 0; a <= 6; a++) {
@@ -122,6 +160,5 @@ public class CalendarTestv3 {
                 System.out.print(dateFormatter.format(date.plusDays(e)));
             }
         }
-
     }
 }
