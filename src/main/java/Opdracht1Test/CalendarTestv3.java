@@ -3,7 +3,7 @@
  *
  * Work in progress.
  * Fix: Invulscherm werkt nu wel, de ingevoerde data gaat naar LocalDate
- * April 2018, Juli 2018 werkt.
+ * Juli 2018 en April 2018 werkt.
  * Januari 2018, februari 2018, oktober 2018, en november 2018 werken enigszins omdat
  * de 1e dag van de maand, zondag, maandag en donderdag zijn gedaan.
  * Dit moet vast sneller en korter kunnen.
