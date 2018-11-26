@@ -28,4 +28,17 @@ public class Blackjackv1 {
         System.out.println("U heeft gekozen om met " + input1 + " spelers Blackjack te spelen." + "\n");
 
     }
+
+    //Icon: ruiten, harten, schoppen, klaver
+    String Icoontje = "Icon";
+
+    //Kaartnummer
+    int CardNumber;
+
+    //
+    public Blackjackv1 (Icoontje anIcon, int aCardNumber){
+
+        this.Icoontje = "anIcon";
+        this.CardNumber = aCardNumber;
+    }
 }
