@@ -4,11 +4,15 @@
  * Robijn wasverzachter, Brinta, Chinese groenten, kwark en luiers erin gezet.
  * DecimalFormatter gebruikt om af te ronden op 2 decimalen
  * Strings productomschrijving en double price korter opgeschreven
+ * korting robijn doorgevoerd met if/else
+ * 4 halen 3 betalen luiers doorgevoerd met if/else
  *
  * Nog te doen:
  * loops gebruiken
- * kortingen doorvoeren, en op woensdagen aanbieding
+ * woensdag aanbieding
  * verwijderen van producten uitwerken
+ * totale korting showen
+ * kassa wisselgeld
  */
 
 package Opdracht2Test;
@@ -52,7 +56,15 @@ public class Supermarktv1 {
         double price1 = 3.00, price2 = 2.50, price3 = 5.00, price4 = 2.00, price5 = 10.00;
 
         //input van de scanner naar totaal berekend
+
+        //robijn 31% korting bij 2 flacons
         int quantityRobijn = input1;
+        if (input1 == 2) {
+            price1 = price1*0.69;
+        } else if (input1 != 2) {
+            price1 = price1*1;
+        }
+
         double totaalAankoop1 = quantityRobijn * price1;
 
         int quantityBrinta = input2;
@@ -64,7 +76,14 @@ public class Supermarktv1 {
         int quantityKwark = input4;
         double totaalAankoop4 = quantityKwark * price4;
 
+        //luiers 4 halen 3 betalen
         int quantityLuiers = input5;
+        if (input5 == 4) {
+            quantityLuiers = 3;
+        } else if (input5 <4 || input5 > 4) {
+            quantityLuiers = input5;
+        }
+
         double totaalAankoop5 = quantityLuiers * price5;
 
         // Declare subtotal field
@@ -94,5 +113,7 @@ public class Supermarktv1 {
         System.out.print("Totaal incl. 21% btw: € "+ formatted);
     }
 }
+
+
 
 
